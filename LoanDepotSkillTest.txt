@@ -1,7 +1,6 @@
 https://github.com/kelalfbry/LoanDepot.git
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-Find the sum of all the multiples of 3 or 5 below 1000.
+Problem 1:
 
         public void ModulusLoanDepot()
         {
@@ -18,4 +17,30 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 Answer = 233168
 **************************
+Problem 2:
+        public void FibonacciLoanDepot()
+        {
+            int len = 4000000;
+            ulong fSum = 0;
 
+            ulong x = 0;
+            ulong y = 1;
+            ulong z = 0;
+           
+            for (int i = 2; i < len; i++)
+            {
+                z = x + y;
+                if (z > 3900000)
+                    break;
+
+                if (z % 2 == 0)
+                {
+                    fSum += z;
+                }
+                x = y;
+                y = z;
+            }
+        }
+
+Answer = 4613732 
+**************************************
